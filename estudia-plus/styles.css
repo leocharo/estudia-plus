@@ -1,0 +1,30 @@
+:root{--bg:#0f172a;--card:#1e293b;--txt:#e2e8f0;--mut:#94a3b8;--pri:#4f46e5;--ok:#22c55e}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
+header{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:space-between;align-items:center;padding:1rem 1.25rem;background:var(--pri)}
+h1{margin:0;font-size:1.6rem;color:#fff}h1 span{color:#fde047}
+h2{margin:0 0 1rem;font-size:1.15rem}
+small{background:var(--pri);border-radius:99px;padding:.1rem .6rem;margin-left:.4rem}
+main{display:grid;grid-template-columns:2fr 1fr;gap:1rem;padding:1rem;max-width:1000px;margin:auto}
+.card{background:var(--card);border-radius:14px;padding:1.25rem}
+.actions{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+button{background:var(--pri);color:#fff;border:0;border-radius:8px;padding:.6rem 1rem;font-size:1rem;cursor:pointer}
+button.ghost{background:transparent;border:1px solid var(--mut);color:var(--txt)}
+header button{background:#fff;color:var(--pri);font-weight:600}
+input{background:#0f172a;color:var(--txt);border:1px solid #334155;border-radius:8px;padding:.6rem;font-size:1rem}
+.pill{background:var(--ok);color:#052e16;border-radius:99px;padding:.2rem .7rem;font-size:.85rem;font-weight:600}
+.pill.off{background:#f87171;color:#450a0a}
+#taskForm{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+#taskForm input:first-child{flex:1 1 200px}
+ul{list-style:none;padding:0;margin:0}
+li{display:flex;align-items:center;gap:.6rem;padding:.7rem 0;border-bottom:1px solid #334155}
+li span{flex:1}li em{display:block;color:var(--mut);font-size:.8rem;font-style:normal}
+li.done span{text-decoration:line-through;color:var(--mut)}
+li button{background:transparent;color:#f87171;padding:.2rem .5rem}
+li input{width:1.2rem;height:1.2rem}
+.pomodoro{text-align:center}
+#timer{font-size:3.5rem;font-weight:700;font-variant-numeric:tabular-nums}
+#mode{color:var(--mut)}.pomodoro .actions{justify-content:center}
+#toast{position:fixed;bottom:1rem;left:50%;transform:translate(-50%,120px);background:#fff;color:#0f172a;padding:.7rem 1.2rem;border-radius:10px;transition:transform .3s}
+#toast.show{transform:translate(-50%,0)}
+@media(max-width:700px){main{grid-template-columns:1fr}}

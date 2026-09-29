@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="description" content="Estudia+: tareas y temporizador Pomodoro para estudiantes.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Estudia+</title>
+</head>
+<body>
+  <header>
+    <h1>Estudia<span>+</span></h1>
+    <div class="actions">
+      <span id="status" class="pill">En línea</span>
+      <button id="btnInstall" hidden>Instalar</button>
+      <button id="btnNotif">Activar avisos</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Tareas pendientes <small id="count">0</small></h2>
+      <form id="taskForm">
+        <input id="taskTitle" placeholder="Ej. Estudiar para examen de Redes" required>
+        <input id="taskDue" type="datetime-local" title="Recordatorio (opcional)">
+        <button type="submit">Agregar</button>
+      </form>
+      <ul id="taskList"></ul>
+    </section>
+
+    <section class="card pomodoro">
+      <h2>Pomodoro</h2>
+      <div id="timer">25:00</div>
+      <p id="mode">Enfoque</p>
+      <div class="actions">
+        <button id="btnStart">Iniciar</button>
+        <button id="btnReset" class="ghost">Reiniciar</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
